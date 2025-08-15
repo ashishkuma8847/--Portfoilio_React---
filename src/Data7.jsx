@@ -1,4 +1,4 @@
-// FloatingDock.jsx
+import React, { useRef, useState } from "react";
 import { cn } from "./Data2";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
@@ -8,7 +8,6 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
-import { useRef, useState } from "react";
 
 export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
   return (
@@ -40,9 +39,7 @@ const FloatingDockMobile = ({ items, className }) => {
                 exit={{
                   opacity: 0,
                   y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
+                  transition: { delay: idx * 0.05 },
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
@@ -99,27 +96,11 @@ function IconContainer({ mouseX, title, icon, href }) {
   let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
   let heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
 
-  let width = useSpring(widthTransform, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
-  let height = useSpring(heightTransform, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
+  let width = useSpring(widthTransform, { mass: 0.1, stiffness: 150, damping: 12 });
+  let height = useSpring(heightTransform, { mass: 0.1, stiffness: 150, damping: 12 });
 
-  let widthIcon = useSpring(widthTransformIcon, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
-  let heightIcon = useSpring(heightTransformIcon, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
+  let widthIcon = useSpring(widthTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
+  let heightIcon = useSpring(heightTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
 
   const [hovered, setHovered] = useState(false);
 
@@ -144,10 +125,7 @@ function IconContainer({ mouseX, title, icon, href }) {
             </motion.div>
           )}
         </AnimatePresence>
-        <motion.div
-          style={{ width: widthIcon, height: heightIcon }}
-          className="flex items-center justify-center"
-        >
+        <motion.div style={{ width: widthIcon, height: heightIcon }} className="flex items-center justify-center">
           {icon}
         </motion.div>
       </motion.div>
