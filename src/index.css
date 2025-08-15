@@ -7,3 +7,15 @@
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
 }
+.theme-animation {
+  transform: translateX(150px);
+  animation: themeAnima 1s ease-in-out forwards;
+}
+@keyframes themeAnima {
+  0% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
