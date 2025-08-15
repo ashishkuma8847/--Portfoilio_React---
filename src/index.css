@@ -19,3 +19,19 @@
     transform: translateX(0px);
   }
 }
+
+
+.circle {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+.circle-merge {
+  transform: translate(-50%, -50%) scale(0.1); /* shrink into cursor */
+}

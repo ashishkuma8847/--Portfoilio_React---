@@ -1,5 +1,7 @@
-import Theme from "./Themetoggel/Themebutton";
-
+import Theme from "./ui/Themetoggel/Themebutton";
+ import "./App.css"
+import { MouseTrail } from "./ui/cursorui/Cursor";
+import { FloatingDockDemo } from "./ui/pagestheme/PagesDPage";
 function App() {
 
   return (
@@ -8,9 +10,9 @@ function App() {
     
  
 
-
+<MouseTrail/>
 <Theme/>
-
+<FloatingDockDemo/>
     </>
   );
 }
