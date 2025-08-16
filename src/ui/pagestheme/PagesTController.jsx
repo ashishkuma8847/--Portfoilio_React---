@@ -8,6 +8,7 @@ import {
   useTransform,
 } from "motion/react";
 import { useTheme } from "../Themetoggel/ThemeProvider";
+import { Link } from "react-router-dom";
 
 export const FloatingDock = ({ items, desktopClassName }) => {
   return (
@@ -63,7 +64,7 @@ function IconContainer({ mouseX, title, icon, href }) {
   const { theme } = useTheme();
 
   return (
-    <a href={href}>
+    <Link to={href}>
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -87,6 +88,6 @@ function IconContainer({ mouseX, title, icon, href }) {
           {icon}
         </motion.div>
       </motion.div>
-    </a>
+    </Link>
   );
 }

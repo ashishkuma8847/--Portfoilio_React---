@@ -3,6 +3,11 @@ import Theme from "./ui/Themetoggel/Themebutton";
 import { MouseTrail } from "./ui/cursorui/Cursor";
 import { FloatingDockDemo } from "./ui/pagestheme/PagesDPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import AboutMe from "./pages/AboutMe";
+import Projects from "./pages/Projects";
+import Contect from "./pages/Contect";
+import Education from "./pages/Education";
 function App() {
 
   return (
@@ -11,13 +16,17 @@ function App() {
     
  
 <BrowserRouter>
+
+<Routes>
+<Route path="/" element={<Home/>}/>
+<Route path="/aboutme" element={<AboutMe/>}/>
+<Route path="/projects" element={<Projects/>}/>
+<Route path="/contect" element={<Contect/>}/>
+<Route path="/education" element={<Education/>}/>
+</Routes>
 <MouseTrail/>
 <FloatingDockDemo/>
 <Theme/>
-<Routes>
-<Route/>
-
-</Routes>
 </BrowserRouter>
 
     </>
