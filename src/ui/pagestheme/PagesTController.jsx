@@ -9,7 +9,7 @@ import {
 } from "motion/react";
 import { useTheme } from "../Themetoggel/ThemeProvider";
 
-export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
+export const FloatingDock = ({ items, desktopClassName }) => {
   return (
     <>
       <FloatingDockDesktop items={items} className={desktopClassName} />
