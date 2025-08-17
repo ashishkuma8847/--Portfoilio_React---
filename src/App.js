@@ -1,4 +1,3 @@
-import Theme from "./components/common/Themetoggel/Themebutton";
  import "./App.css"
 import { MouseTrail } from "./components/common/cursorui/Cursor";
 import { FloatingDockDemo } from "./components/common/pagestheme/PagesDPage";
@@ -8,6 +7,7 @@ import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import Contect from "./pages/Contect";
 import Education from "./pages/Education";
+import Header from "./components/common/Header";
 function App() {
 
   return (
@@ -16,7 +16,7 @@ function App() {
     
  
 <BrowserRouter>
-
+<Header/>
 <Routes>
 <Route path="/" element={<Home/>}/>
 <Route path="/aboutme" element={<AboutMe/>}/>
@@ -26,7 +26,6 @@ function App() {
 </Routes>
 <MouseTrail/>
 <FloatingDockDemo/>
-<Theme/>
 </BrowserRouter>
 
     </>
