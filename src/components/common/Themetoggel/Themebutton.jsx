@@ -10,10 +10,8 @@ const Theme = () => {
   const [selected, setSelected] = useState("dark");
  
   return (
-  <div className="pt-[5px]">
 
     <SliderToggle selected={selected} setSelected={setSelected} />
-  </div>
   );
 };
 

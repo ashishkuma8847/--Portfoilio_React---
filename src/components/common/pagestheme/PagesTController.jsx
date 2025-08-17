@@ -8,7 +8,7 @@ import {
   useTransform,
 } from "motion/react";
 import { useTheme } from "../Themetoggel/ThemeProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const FloatingDock = ({ items, desktopClassName }) => {
   return (
@@ -42,7 +42,7 @@ const FloatingDockDesktop = ({ items, className }) => {
 
 function IconContainer({ mouseX, title, icon, href }) {
   let ref = useRef(null);
-
+  const location = useLocation(); 
   let distance = useTransform(mouseX, (val) => {
     let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
@@ -61,7 +61,8 @@ function IconContainer({ mouseX, title, icon, href }) {
   let heightIcon = useSpring(heightTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
 
   const [hovered, setHovered] = useState(false);
-  const { theme } = useTheme();
+
+  const isActive = location.pathname === href;
 
   return (
     <Link to={href}>
@@ -70,7 +71,8 @@ function IconContainer({ mouseX, title, icon, href }) {
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className={`${ "bg-gray-200 " } relative flex aspect-square items-center justify-center rounded-full  `}
+        className={` relative flex aspect-square items-center justify-center rounded-full 
+          ${isActive ? " bg-customTeal" : " bg-gray-200"}`}
       >
         <AnimatePresence>
           {hovered && (
@@ -78,12 +80,14 @@ function IconContainer({ mouseX, title, icon, href }) {
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className={`${theme ? "text-gray-200  bg-[#0D0D0D]" :"text-[#0D0D0D] bg-gray-200 "} absolute -top-8 left-1/2 w-fit rounded-md border  px-2 py-0.5 text-xs whitespace-pre  `}
+              className="bg-customTeal text-gray-200 absolute -top-8 left-1/2 w-fit rounded-md 
+                         font-poppins font-semibold px-2 py-1 text-xs whitespace-pre"
             >
               {title}
             </motion.div>
           )}
         </AnimatePresence>
+
         <motion.div style={{ width: widthIcon, height: heightIcon }} className="flex items-center justify-center ">
           {icon}
         </motion.div>
