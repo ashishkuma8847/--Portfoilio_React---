@@ -1,4 +1,4 @@
-import { useTheme } from "../ui/Themetoggel/ThemeProvider";
+import { useTheme } from "../components/common/Themetoggel/ThemeProvider";
 
 function AboutMe() {
     const { theme } = useTheme();

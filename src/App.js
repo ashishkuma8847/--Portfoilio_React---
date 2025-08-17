@@ -1,7 +1,7 @@
-import Theme from "./ui/Themetoggel/Themebutton";
+import Theme from "./components/common/Themetoggel/Themebutton";
  import "./App.css"
-import { MouseTrail } from "./ui/cursorui/Cursor";
-import { FloatingDockDemo } from "./ui/pagestheme/PagesDPage";
+import { MouseTrail } from "./components/common/cursorui/Cursor";
+import { FloatingDockDemo } from "./components/common/pagestheme/PagesDPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";

@@ -61,6 +61,6 @@ export const MouseTrail = () => {
   }, []);
 
   return Array.from({ length: 40 }).map((_, i) => (
-    <div key={i} className={`${!theme ? "bg-white" : "bg-black"} circle  z-50`}></div>
+    <div key={i} className={`${!theme ? "bg-customTeal" : "bg-black"} circle  z-50`}></div>
   ));
 };

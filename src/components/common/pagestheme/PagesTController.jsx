@@ -84,7 +84,7 @@ function IconContainer({ mouseX, title, icon, href }) {
             </motion.div>
           )}
         </AnimatePresence>
-        <motion.div style={{ width: widthIcon, height: heightIcon }} className="flex items-center justify-center">
+        <motion.div style={{ width: widthIcon, height: heightIcon }} className="flex items-center justify-center ">
           {icon}
         </motion.div>
       </motion.div>
