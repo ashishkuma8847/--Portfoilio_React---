@@ -50,8 +50,8 @@ export const MouseTrail = () => {
         circle.y = y;
 
         const nextCircle = circles[index + 1] || circles[0];
-        x += (nextCircle.x - x) * 0.35;
-        y += (nextCircle.y - y) * 0.35;
+        x += (nextCircle.x - x) * 0.25;
+        y += (nextCircle.y - y) * 0.25;
       });
 
       requestAnimationFrame(animateCircles);
