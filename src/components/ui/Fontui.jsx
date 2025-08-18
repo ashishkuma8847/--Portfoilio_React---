@@ -86,7 +86,7 @@ const {theme}=useTheme()
       deleteSpeed={80}
       delayBetweenWords={1500}
       cursorBlinkSpeed={0.4}
-      className="text-purple-400"
+      className=""
     />
   );
 }
