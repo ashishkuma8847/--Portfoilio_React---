@@ -1,9 +1,7 @@
 import { useTheme } from "../components/common/Themetoggel/ThemeProvider";
-import Sideanimation from "../Home/Sideanimation";
 import Fontui from "../components/ui/Fontui";
 import Button from "../components/ui/Button";
 import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';
-import aiGif from "../assets/Ai-powered.gif"
 const Home = () => {
     const { theme } = useTheme();
 
@@ -31,12 +29,10 @@ const Home = () => {
                     </div>
 
                 </div>
-                {/* <Sideanimation /> */}
-                <img
-                    src={aiGif}
-                    alt="AI Powered Animation"
-                    className="w-80 h-80 object-contain drop-shadow-lg"
-                />
+              
+                {/* <iframe title="data " className="w-[500px] h-[500px]" src="https://lottie.host/embed/a4894a9d-e2bd-474a-a412-b93d259a812d/GcH448f9RE.lottie"></iframe> */}
+                <iframe title="data " className="w-[500px] -z-10 h-[500px]" src="https://lottie.host/embed/560cffd6-0949-4088-b747-5b53c8a721a2/324XhjoFNE.lottie"></iframe>
+                {/* <iframe title="data " className="w-[500px] -z-10 h-[500px]" src="https://lottie.host/embed/cd9e673b-9d2b-4e29-b2b9-76b4394fa637/uTmQ3jVyUJ.lottie"></iframe> */}
             </div>
         </section>
 
