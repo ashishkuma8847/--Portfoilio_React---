@@ -12,7 +12,6 @@ function App() {
 
   return (
     <>
-      {/* <TextGenerateEffect words={"himanshu is a good designer and reserture"}/> */}
     
  
 <BrowserRouter>
