@@ -2,22 +2,25 @@ import { motion, useAnimationControls } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTheme } from "../common/Themetoggel/ThemeProvider";
 
-function TypingText({
-  words = [],
-  typingSpeed = 150,
-  deleteSpeed = 100,
-  delayBetweenWords = 1000,
+function Fontui({
+  words = ["Frontend Developer", "React Enthusiast", "UI/UX Designer"], // ✅ tumhare words
+  typingSpeed = 120,
+  deleteSpeed = 80,
+  delayBetweenWords = 1500,
+  cursorBlinkSpeed = 0.4,
   className = "",
-  cursorBlinkSpeed = 0.5,
+  outofspan = "I am ", // ✅ span ke bahar ka text
+  inspan = "", // ✅ span ke andar ka prefix text
 }) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const controls = useAnimationControls();
+  const { theme } = useTheme();
 
+  // Typing / Deleting logic
   useEffect(() => {
     const word = words[currentWordIndex];
-
     let timer;
 
     if (isDeleting) {
@@ -42,16 +45,9 @@ function TypingText({
     }
 
     return () => clearTimeout(timer);
-  }, [
-    currentText,
-    currentWordIndex,
-    isDeleting,
-    words,
-    typingSpeed,
-    deleteSpeed,
-    delayBetweenWords,
-  ]);
+  }, [currentText, currentWordIndex, isDeleting, words, typingSpeed, deleteSpeed, delayBetweenWords]);
 
+  // Cursor blinking animation
   useEffect(() => {
     controls.start({
       opacity: [0.2, 1],
@@ -62,15 +58,18 @@ function TypingText({
       },
     });
   }, [controls, cursorBlinkSpeed]);
-const {theme}=useTheme()
+
   return (
-    <div className="   flex items-start  justify-start ">
-      <div className={`font-semibold text-[26px] italic  font-inter text-white ${className}`}>
-        <span className={`${!theme ? "text-white" :"text-customBlack"}`}>Ashis</span><span className="text-customTeal">h.{currentText}</span>
-        <motion.span
-          animate={controls}
-          className="inline-block text-customTeal"
-        >
+    <div className="flex items-start justify-start">
+      <div className={`font-semibold text-[26px] italic font-inter ${className}`}>
+        <span className={`${!theme ? "text-white" : "text-customBlack"}`}>
+          {outofspan}
+        </span>
+        <span className="text-customTeal">
+          {inspan}
+          {currentText}
+        </span>
+        <motion.span animate={controls} className="inline-block text-customTeal">
           |
         </motion.span>
       </div>
@@ -78,16 +77,4 @@ const {theme}=useTheme()
   );
 }
 
- function Fontui() {
-  return (
-    <TypingText
-      words={["dev" ,"des"]}
-      typingSpeed={120}
-      deleteSpeed={80}
-      delayBetweenWords={1500}
-      cursorBlinkSpeed={0.4}
-      className=""
-    />
-  );
-}
-export default Fontui
+export default Fontui;

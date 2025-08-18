@@ -18,7 +18,7 @@ const Theme = () => {
 const SliderToggle = ({ selected, setSelected }) => {
     const { theme, setTheme } = useTheme();
   if (theme === true) {
-    document.body.style.background = "white";
+    document.body.style.background = "#dfdfdf";
   } else {
     document.body.style.background = "black";
   }

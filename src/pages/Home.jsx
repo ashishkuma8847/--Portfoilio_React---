@@ -1,60 +1,40 @@
-import { useState } from "react";
-import { useTheme } from "../components/common/Themetoggel/ThemeProvider";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
-
-function Home() {
+    import { useTheme } from "../components/common/Themetoggel/ThemeProvider";
+import Sideanimation from "../Home/Sideanimation";
+import Fontui from "../components/ui/Fontui";
+import Button from "../components/ui/Button";
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';
+const Home = () => {
     const { theme } = useTheme();
-    const [isHovering, setIsHovering] = useState(false)
-    const lottieOptions = {
-        src: "https://lottie.host/58753882-bb6a-49f5-a2c0-950eda1e135a/NLbpVqGegK.lottie",
-        loop: true,
-        autoplay: true,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice',
-            progressiveLoad: true,
-        },
-        style: { width: "100%", height: "100%" },
-        className: `w-[550px] h-[400px] transition-all duration-500 ${isHovering
-                ? "scale-[180%] sm:scale-[160%] md:scale-[150%] lg:scale-[145%] rotate-2"
-                : "scale-[175%] sm:scale-[155%] md:scale-[145%] lg:scale-[140%]"
-            }`
-    };
+
+
+    // ✅ Lottie options (no scaling inside)
+
     return (
-        <>
-            <section className={`${theme ? "text-black" : "text-white"}`}>
-                <div className=" container">
-                    <div className="flex justify-between w-full items-center ">
-                        <div className="">
-
-                        </div>
-                        <div className="w-full py-[10%] sm:py-0 lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
-                            onMouseEnter={() => setIsHovering(true)}
-                            onMouseLeave={() => setIsHovering(false)}
-                        >
-                            <div className="relative w-full opacity-90">
-                                <div className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"
-                                    }`}>
-                                </div>
-
-                                <div className={`relative lg:left-12 z-10 w-full opacity-90 transform transition-transform duration-500 ${isHovering ? "scale-105" : "scale-100"
-                                    }`}>
-                                    <DotLottieReact {...lottieOptions} />
-                                </div>
-
-                                <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${isHovering ? "opacity-50" : "opacity-20"
-                                    }`}>
-                                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] transition-all duration-700 ${isHovering ? "scale-110" : "scale-100"
-                                        }`}>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <section className={`${theme ? "text-black" : "text-white"}`}>
+            <div className="container flex justify-between items-center font-poppins">
+                <div className="flex flex-col justify-center gap-[30px]">
+                      
+                    <h1 className="font-semibold text-[64px] w-[400px] leading-[65px]">Full-Stack<span className="text-customTeal"> Developer</span> </h1>
+                    <Fontui words={["Network & Telecom Student","Tech Enthusiast"]} outofspan=""/>
+                    <div className="flex gap-[15px]">
+                        
+                    <Button title={"React"}/>
+                    <Button title={"Javascript"}/>
+                    <Button title={"Node.js"}/>
+                    <Button title={"Tailwind"}/>
                     </div>
+                    <div className="flex gap-[15px]">
+                        <button className={`${theme ? "bg-white/50 border-black/10 group-hover:border-black/20" :"bg-black/50 border-white/10 group-hover:border-white/20"} relative rounded-xl  backdrop-blur-xl p-2 flex items-center justify-center border  transition-all  duration-300`}><IconBrandGithub /> </button>
+                        <button className={`${theme ? "bg-white/50 border-black/10 group-hover:border-black/20" :"bg-black/50 border-white/10 group-hover:border-white/20"} relative rounded-xl  backdrop-blur-xl p-2 flex items-center justify-center border  transition-all  duration-300`}><IconBrandInstagram  /> </button>
+                        <button className={`${theme ? "bg-white/50 border-black/10 group-hover:border-black/20" :"bg-black/50 border-white/10 group-hover:border-white/20"} relative rounded-xl  backdrop-blur-xl p-2 flex items-center justify-center border  transition-all  duration-300`}><IconBrandLinkedin   /> </button>
+                    </div>
+
                 </div>
+                <Sideanimation />
+            </div>
+        </section>
 
 
-            </section>
-        </>
-    )
-}
+    );
+};
 export default Home

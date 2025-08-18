@@ -6,7 +6,7 @@ function Header() {
     return (
         <>
         <div className="container font-inter py-[24px]  flex justify-between">
-            <Fontui/>
+            <Fontui  words={["dev","des"]} inspan="h." outofspan="Ashis"/>
             <Theme/>
         </div>
 
