@@ -12,7 +12,10 @@ const Home = () => {
         <section className={`${theme ? "text-black" : "text-white"}`}>
             <div className="container flex justify-between items-center font-poppins">
                 <div className="flex flex-col justify-center gap-[30px]">
-
+                    <div className="flex   text-customTeal relative font-medium text-lg h-[30px]">
+                        <iframe title="data" className="w-[84px] absolute left-[-50px] top-[-48px] h-[84px]" src="https://lottie.host/embed/49ef9e95-4631-42fe-a4d5-ed8bf3addcfc/YLuZni78Ue.lottie"></iframe>
+                       <h1 className="  ">Ready to Innovate</h1>
+                    </div>
                     <h1 className="font-semibold text-[64px] w-[400px] leading-[65px]">Full-Stack<span className="text-customTeal"> Developer</span> </h1>
                     <Fontui words={["Network & Telecom Student", "Tech Enthusiast"]} outofspan="" />
                     <div className="flex gap-[15px]">

@@ -36,7 +36,7 @@
   transform: translate(-50%, -50%) scale(0.1); /* shrink into cursor */
 }
 .container{
-  max-width: 1360px;
+  max-width: 1260px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
