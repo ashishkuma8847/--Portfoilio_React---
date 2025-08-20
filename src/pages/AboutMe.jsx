@@ -26,6 +26,7 @@ function AboutMe() {
             Icon: IconTimezone
         },
     ]
+
     return (
         <>
             <section className={`${theme ? "text-black" : "text-white"}`}>
@@ -80,7 +81,7 @@ function AboutMe() {
                             {
                                 data.map((item, index) => (
                                     <div key={index + item} {...item}>
-                                        <AboutCard ArrowUpRight={item.ArrowUpRight} description={item.description} label={item.label} value={item.value} Icon={item.Icon} />
+                                        <AboutCard pending={true} ArrowUpRight={item.ArrowUpRight} description={item.description} label={item.label} value={item.value} Icon={item.Icon} />
                                     </div>
                                 ))
                             }
