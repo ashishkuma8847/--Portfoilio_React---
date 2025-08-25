@@ -1,7 +1,14 @@
 import AboutCard from "../components/common/Card/AboutCard";
 import { useTheme } from "../components/common/Themetoggel/ThemeProvider";
 import { IconArrowUpRight, IconCode, IconAward, IconTimezone } from '@tabler/icons-react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 function AboutMe() {
+    AOS.init({
+        duration: 1200,
+        once: false,
+        offset: 0,
+      });
     const { theme } = useTheme();
     const data = [
         {
@@ -34,7 +41,7 @@ function AboutMe() {
                     <div className="pl-[40px] mt-[80px] flex flex-col gap-[40px]">
 
                         <div className="flex justify-between items-center">
-                            <div className="flex flex-col gap-[80px]">
+                            <div data-aos="fade-right" className="flex flex-col gap-[80px]">
                             <div className="flex justify-center   flex-col gap-5">
                                 <h1 className="font-inter font-bold text-[48px] leading-10 ">Abo<span className="text-customTeal">ut Me</span></h1>
                                 <div className="relative">
@@ -42,7 +49,7 @@ function AboutMe() {
                                     <h4 className="font-medium text-[20px]">Transforming ideas into digital experiences</h4>
                                 </div>
                             </div>
-                            <div className="w-[500px]">
+                            <div  className="w-[500px]">
                                 <div className="">
                                     <h1 className="font-bold text-[35px]">Hello, I<span className="text-customTeal">'m  Ashish</span>, a passionate <span className="text-customTeal">Full-Stack Web Developer.</span></h1>
                                     <div className="font-semibold text-[20px] tracking-wide">
@@ -52,7 +59,7 @@ function AboutMe() {
                             </div>
 
                             </div>
-                            <div className="relative  group md:mr-[50px]">
+                            <div data-aos="fade-left" className="relative   group md:mr-[50px]">
                                 <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
                                     <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 transition-all duration-700 group-hover:border-white/40 group-hover:scale-105" />
 

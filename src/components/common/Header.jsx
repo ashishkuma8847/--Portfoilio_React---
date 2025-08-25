@@ -1,11 +1,9 @@
 import Fontui from "../ui/Fontui"
 import Theme from "./Themetoggel/Themebutton"
-import { useTheme } from "./Themetoggel/ThemeProvider"
 function Header() {
-    const {theme}=useTheme()
     return (
         <>
-        <div className="container font-inter py-[24px]  flex justify-between">
+        <div className="container font-inter py-[24px]  flex justify-between relative -z-0">
             <Fontui  words={["dev","des"]} inspan="h." outofspan="Ashis"/>
             <Theme/>
         </div>

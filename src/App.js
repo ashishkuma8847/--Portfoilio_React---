@@ -1,32 +1,46 @@
- import "./App.css"
+import "./App.css";
 import { MouseTrail } from "./components/common/cursorui/Cursor";
 import { FloatingDockDemo } from "./components/common/pagestheme/PagesDPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
-import Projects from "./pages/Projects";
 import Contect from "./pages/Contect";
-import Education from "./pages/Education";
 import Header from "./components/common/Header";
+import { AnimatePresence } from "framer-motion";
+import WelcomeScreen from "./components/ui/Wellcomepage";
+import { useState } from "react";
+import Portfolio from "./pages/Portfolio";
+
 function App() {
+  const [showWelcome, setShowWelcome] = useState(true);
 
   return (
     <>
-    
- 
-<BrowserRouter>
-<Header/>
-<Routes>
-<Route path="/" element={<Home/>}/>
-<Route path="/aboutme" element={<AboutMe/>}/>
-<Route path="/projects" element={<Projects/>}/>
-<Route path="/contect" element={<Contect/>}/>
-<Route path="/education" element={<Education/>}/>
-</Routes>
-<MouseTrail/>
-<FloatingDockDemo/>
-</BrowserRouter>
+      <BrowserRouter>
+          <MouseTrail />
+        <AnimatePresence mode="wait">
+          {showWelcome && (
+            <WelcomeScreen
+              onLoadingComplete={() => setShowWelcome(false)}
+            />
+          )}
+        </AnimatePresence>
 
+        {!showWelcome && (
+          <>
+            <Header />
+
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/aboutme" element={<AboutMe />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contect" element={<Contect />} />
+            </Routes>
+
+            <FloatingDockDemo />
+          </>
+        )}
+      </BrowserRouter>
     </>
   );
 }
