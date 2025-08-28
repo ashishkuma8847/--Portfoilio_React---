@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 
-const AnimatedBackground = () => {
+const Animated = () => {
     const blobRefs = useRef([])
     const initialPositions = [
         { x: -4, y: 0 },
@@ -10,13 +10,13 @@ const AnimatedBackground = () => {
     ]
 
     useEffect(() => {
-        let currentScroll = 0
+        // let currentScroll = 0    
         let requestId
 
         const handleScroll = () => {
             const newScroll = window.pageYOffset
-            const scrollDelta = newScroll - currentScroll
-            currentScroll = newScroll
+            // const scrollDelta = newScroll - currentScroll
+            // currentScroll = newScroll
 
             blobRefs.current.forEach((blob, index) => {
                 const initialPos = initialPositions[index]
@@ -53,7 +53,7 @@ const AnimatedBackground = () => {
 
                 <div
                     ref={(ref) => (blobRefs.current[1] = ref)}
-                    className="absolute top-0 -right-4 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-[128px] opacity-40 md:opacity-20 hidden sm:block"
+                    className="absolute top-0 -right-4 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-[128px] opacity-40 md:opacity-20 hidden sm:block"
                 ></div>
 
                 <div
@@ -67,10 +67,10 @@ const AnimatedBackground = () => {
                 ></div>
 
             </div>
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f10_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f10_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f20_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f20_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         </div>
     )
 }
 
-export default AnimatedBackground
+export default Animated
 

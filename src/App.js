@@ -10,7 +10,8 @@ import { AnimatePresence } from "framer-motion";
 import WelcomeScreen from "./components/ui/Wellcomepage";
 import { useState } from "react";
 import Portfolio from "./pages/Portfolio";
-import AnimatedBackground from "./pages/AnimatedBackground";
+import Animated from "./pages/Animated";
+// import AnimatedBackground from "./components/ui/AnimatedBackground";
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -29,7 +30,8 @@ function App() {
 
         {!showWelcome && (
           <>
-          <AnimatedBackground/>
+          <Animated/>
+          {/* <AnimatedBackground/>  */}
             <Header />
 
             <Routes>

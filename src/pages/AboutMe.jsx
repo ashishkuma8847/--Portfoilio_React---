@@ -38,10 +38,10 @@ function AboutMe() {
         <>
             <section className={`${theme ? "text-black" : "text-white"}`}>
                 <div className="container ">
-                    <div className="pl-[40px] mt-[80px] flex flex-col gap-[40px]">
+                    <div className="pl-[40px] h-screen justify-center flex flex-col gap-[40px]">
 
                         <div className="flex justify-between items-center">
-                            <div data-aos="fade-right" className="flex flex-col gap-[80px]">
+                            <div data-aos="fade-right" className="flex flex-col gap-[30px]">
                             <div className="flex justify-center   flex-col gap-5">
                                 <h1 className="font-inter font-bold text-[48px] leading-10 ">Abo<span className="text-customTeal">ut Me</span></h1>
                                 <div className="relative">
