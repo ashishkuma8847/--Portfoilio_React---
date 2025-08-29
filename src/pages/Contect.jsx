@@ -1,4 +1,4 @@
-import { useTheme } from "../components/common/Themetoggel/ThemeProvider";
+import { useTheme } from "../components/Themetoggel/ThemeProvider";
 
 function Contect() {
     const { theme } = useTheme();

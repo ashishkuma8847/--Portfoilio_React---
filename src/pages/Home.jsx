@@ -1,4 +1,4 @@
-import { useTheme } from "../components/common/Themetoggel/ThemeProvider";
+import { useTheme } from "../components/Themetoggel/ThemeProvider";
 import Fontui from "../components/ui/Fontui";
 import Button from "../components/ui/Button";
 import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';

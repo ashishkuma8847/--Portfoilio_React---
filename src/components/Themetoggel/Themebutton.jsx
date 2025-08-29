@@ -4,7 +4,7 @@ import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "./ThemeProvider";
 
 const TOGGLE_CLASSES =
-  "text-sm font-medium flex items-center gap-2 px-3 md:pl-3 md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10";
+  "text-sm font-medium flex items-center gap-2 px-3 md:pl-3  md:pr-3.5 py-3 md:py-1.5 transition-colors relative z-10";
 
 const Theme = () => {
   const [selected, setSelected] = useState("dark");
@@ -23,7 +23,7 @@ const SliderToggle = ({ selected, setSelected }) => {
     document.body.style.background = "black";
   }
   return (
-    <div className="relative  flex w-fit items-center rounded-full">
+    <div className={`${theme ? "bg-[#ffffff2d]" :"bg-white/10"} relative backdrop-blur-md shadow-lg  flex w-fit  items-center rounded-full`}>
       <button
         className={`${TOGGLE_CLASSES} ${
           selected === "light" ? "text-white" : "text-slate-300"

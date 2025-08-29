@@ -1,4 +1,4 @@
-import { useTheme } from "../common/Themetoggel/ThemeProvider";
+import { useTheme } from "../Themetoggel/ThemeProvider";
 
 const Button = ({title}) => {
     const {theme}=useTheme()

@@ -1,5 +1,5 @@
-import AboutCard from "../components/common/Card/AboutCard";
-import { useTheme } from "../components/common/Themetoggel/ThemeProvider";
+import AboutCard from "../components/Card/AboutCard";
+import { useTheme } from "../components/Themetoggel/ThemeProvider";
 import { IconArrowUpRight, IconCode, IconAward, IconTimezone } from '@tabler/icons-react';
 import AOS from "aos";
 import "aos/dist/aos.css";

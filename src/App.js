@@ -1,6 +1,6 @@
 import "./App.css";
-import { MouseTrail } from "./components/common/cursorui/Cursor";
-import { FloatingDockDemo } from "./components/common/pagestheme/PagesDPage";
+import { MouseTrail } from "./components/cursorui/Cursor";
+import { FloatingDockDemo } from "./components/pagestheme/PagesDPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";

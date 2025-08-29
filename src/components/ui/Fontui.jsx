@@ -1,6 +1,6 @@
 import { motion, useAnimationControls } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useTheme } from "../common/Themetoggel/ThemeProvider";
+import { useTheme } from "../Themetoggel/ThemeProvider";
 
 function Fontui({
   words = ["Frontend Developer", "React Enthusiast", "UI/UX Designer"], // ✅ tumhare words
