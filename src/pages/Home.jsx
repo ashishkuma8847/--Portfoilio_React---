@@ -16,7 +16,7 @@ const Home = () => {
 
     return (
         <section className={`${theme ? "text-black" : "text-white"}`}>
-            <div className="container flex lg:flex-row flex-col pt-[100px] pb-[30px] lg:py-0  h-screen  justify-between my-auto  items-center font-poppins">
+            <div className="container flex lg:flex-row flex-col pt-[100px] pb-[30px] lg:py-0  h-screen  gap-2 md:justify-between my-auto  items-center font-poppins">
                 <div data-aos="fade-right" className="flex lg:pl-[40px] p-[0px] flex-col justify-center gap-[10px] lg:gap-[30px]">
                     <div     className="flex   text-customTeal relative lg:font-medium font-normal text-sm lg:text-lg h-[30px]">
                         <iframe title="data" className="w-[94px] -z-10 absolute left-[-52px] top-[-50px] h-[94px]" src="https://lottie.host/embed/49ef9e95-4631-42fe-a4d5-ed8bf3addcfc/YLuZni78Ue.lottie"></iframe>
