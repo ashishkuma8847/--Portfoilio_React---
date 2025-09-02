@@ -20,7 +20,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-          <MouseTrail />
+      <div className="lg:block hidden"><MouseTrail /></div>
+          
         <AnimatePresence mode="wait">
           {showWelcome && (
             <WelcomeScreen
