@@ -60,8 +60,8 @@ function Fontui({
   }, [controls, cursorBlinkSpeed]);
 
   return (
-    <div className="flex items-start justify-start">
-      <div className={`font-semibold text-[26px] italic font-inter ${className}`}>
+    <div className="flex items-center justify-start">
+      <div className={`font-semibold  italic font-inter ${className}`}>
         <span className={`${!theme ? "text-white" : "text-customBlack"}`}>
           {outofspan}
         </span>

@@ -11,6 +11,7 @@ import WelcomeScreen from "./components/ui/Wellcomepage";
 import { useState } from "react";
 import Portfolio from "./pages/Portfolio";
 import Animated from "./pages/Animated";
+import { FloatingDockDemo2 } from "./components/pagestheme/PagesDPage2";
 // import AnimatedBackground from "./components/ui/AnimatedBackground";
 
 function App() {
@@ -40,8 +41,9 @@ function App() {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contect" element={<Contect />} />
             </Routes>
-
-            <FloatingDockDemo />
+              
+           <div className="md:block hidden" ><FloatingDockDemo /></div> 
+           <div className="md:hidden block"><FloatingDockDemo2 /></div> 
           </>
         )}
       </BrowserRouter>

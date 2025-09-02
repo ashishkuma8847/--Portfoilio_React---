@@ -23,7 +23,9 @@ const SliderToggle = ({ selected, setSelected }) => {
     document.body.style.background = "black";
   }
   return (
-    <div className={`${theme ? "bg-[#ffffff2d]" :"bg-white/10"} relative backdrop-blur-md shadow-lg  flex w-fit  items-center rounded-full`}>
+    <div className={`${theme ? "bg-[#ffffff2d]" :"bg-white/10"} relative backdrop-blur-md h-[42px] shadow-lg justify-between  flex w-[100px] md:w-fit  items-center rounded-full`}>
+
+
       <button
         className={`${TOGGLE_CLASSES} ${
           selected === "light" ? "text-white" : "text-slate-300"
@@ -34,9 +36,11 @@ const SliderToggle = ({ selected, setSelected }) => {
         }}
         
       >
-        <FiSun className="relative z-10 text-lg md:text-sm" />
-        <span className="relative z-10">Light</span>
+        <FiSun className="relative z-10  text-lg md:text-sm" />
+        <span className="relative md:block hidden z-10">Light</span>
       </button>
+
+
       <button
         className={`${TOGGLE_CLASSES} ${
           selected === "dark" ? "text-white" : "text-slate-800"
@@ -48,8 +52,10 @@ const SliderToggle = ({ selected, setSelected }) => {
 
       >
         <FiMoon className="relative z-10 text-lg md:text-sm" />
-        <span className="relative z-10">Dark</span>
+        <span className="relative md:block hidden z-10">Dark</span>
       </button>
+
+
       <div
         className={`absolute inset-0 z-0 flex ${
           selected === "dark" ? "justify-end" : "justify-start"
@@ -58,7 +64,7 @@ const SliderToggle = ({ selected, setSelected }) => {
         <motion.span
           layout
           transition={{ type: "spring", damping: 15, stiffness: 250 }}
-          className="h-full w-1/2 rounded-full bg-customTeal"
+          className="h-full w-1/2 rounded-full z-0 bg-customTeal"
         />
       </div>
     </div>
