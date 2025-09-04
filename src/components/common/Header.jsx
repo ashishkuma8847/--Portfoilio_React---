@@ -21,8 +21,8 @@ function Header() {
   return (
     <>
       <div
-        className={`container font-inter py-[16px] px-4 flex items-center justify-between 
-          fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] z-50 
+        className={` font-inter py-[16px] px-4 flex items-center justify-between 
+          fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1520px] z-50 
           transition-all duration-300 
           ${scrolled ? "bg-white/30 dark:bg-black/30 backdrop-blur-md shadow-sm" : "bg-transparent"}`}
       >

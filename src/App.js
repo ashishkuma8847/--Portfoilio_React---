@@ -43,8 +43,8 @@ function App() {
               <Route path="/contect" element={<Contect />} />
             </Routes>
               
-           <div className="md:block hidden" ><FloatingDockDemo /></div> 
-           <div className="md:hidden block"><FloatingDockDemo2 /></div> 
+           <div className="lg:block hidden" ><FloatingDockDemo /></div> 
+           <div className="lg:hidden block"><FloatingDockDemo2 /></div> 
           </>
         )}
       </BrowserRouter>
