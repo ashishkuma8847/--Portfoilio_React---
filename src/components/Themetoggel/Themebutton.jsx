@@ -23,7 +23,7 @@ const SliderToggle = ({ selected, setSelected }) => {
     document.body.style.background = "black";
   }
   return (
-    <div className={`${theme ? "bg-[#ffffff2d]" :"bg-white/10"} relative backdrop-blur-md h-[42px] shadow-lg justify-between  flex w-[100px] md:w-fit  items-center rounded-full`}>
+    <div className={`${theme ? "bg-[#ffffff2d]" :"bg-white/10"} relative backdrop-blur-md h-[37px] md:h-[42px] shadow-lg justify-between  flex w-[100px] md:w-fit  items-center rounded-full`}>
 
 
       <button
