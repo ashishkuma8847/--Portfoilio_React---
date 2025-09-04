@@ -47,11 +47,11 @@ const AboutCard = ({ Icon, value, label, description, ArrowUpRight, pending }) =
       ref={cardRef}
       data-aos="fade-up"
       data-aos-duration="1300"
-      className="relative font-poppins w-[427px] group"
+      className=" font-poppins max-w-[427px] w-full     group"
     >
       {/* Agar pending true hai & abhi visible nahi hai → skeleton */}
       {pending && !visible ? (
-        <div className="relative z-10 bg-gray-800/40 backdrop-blur-lg rounded-2xl p-6 border border-white/10 h-full flex flex-col justify-between animate-pulse">
+        <div className="relative z-10 bg-gray-800/40 backdrop-blur-lg rounded-2xl p-6 border border-white/10 h-full flex flex-col  animate-pulse">
           <div className="flex items-center justify-between mb-4">
             <div className="w-16 h-16 rounded-full bg-gray-700"></div>
             <div className="w-12 h-8 bg-gray-700 rounded"></div>
@@ -66,16 +66,16 @@ const AboutCard = ({ Icon, value, label, description, ArrowUpRight, pending }) =
         <div
           className={`relative z-10 ${
             theme ? "bg-gray-900" : "bg-gray-900/50"
-          } backdrop-blur-lg rounded-2xl p-6 border border-white/10 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col justify-between`}
+          } backdrop-blur-lg rounded-2xl p-6 border border-white/10 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col justify-between `}
         >
           <div className="absolute -z-10 inset-0 bg-gradient-to-br from-[#6366f1] to-[#12BBB6] opacity-10 group-hover:opacity-20 transition-opacity duration-300"></div>
 
           <div className="flex items-center justify-between mb-4">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/10 transition-transform group-hover:rotate-6">
-              <Icon className="w-8 h-8 text-white" />
+            <div className="md:w-16 w-14 h-14 md:h-16 rounded-full flex items-center justify-center bg-white/10 transition-transform group-hover:rotate-6">
+              <Icon className="md:w-8 w-5 h-5 md:h-8 text-white" />
             </div>
             <span
-              className="text-4xl font-bold text-white"
+              className=" text-2xl md:text-4xl font-bold text-white"
               data-aos="fade-up-left"
               data-aos-duration="1500"
               data-aos-anchor-placement="top-bottom"

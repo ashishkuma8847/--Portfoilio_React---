@@ -3,13 +3,18 @@ import { useTheme } from "../components/Themetoggel/ThemeProvider";
 import { IconArrowUpRight, IconCode, IconAward, IconTimezone } from '@tabler/icons-react';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 function AboutMe() {
     AOS.init({
         duration: 1200,
         once: false,
         offset: 0,
-      });
+    });
+
     const { theme } = useTheme();
+
     const data = [
         {
             ArrowUpRight: IconArrowUpRight,
@@ -37,30 +42,50 @@ function AboutMe() {
     return (
         <>
             <section className={`${theme ? "text-black" : "text-white"}`}>
-                <div className="container ">
-                    <div className="pl-[40px] h-screen justify-center flex flex-col gap-[40px]">
+                <div className="container">
+                    {/* Main container with responsive padding */}
+                    <div className="sm:pl-[40px] pt-[60px] sm:pt-[100px] sm:pb-[90px]  lg:h-screen justify-center flex flex-col gap-[20px] md:gap-[40px]">
 
-                        <div className="flex justify-between items-center">
-                            <div data-aos="fade-right" className="flex flex-col gap-[30px]">
-                            <div className="flex justify-center   flex-col gap-5">
-                                <h1 className="font-inter font-bold text-[48px] leading-10 ">Abo<span className="text-customTeal">ut Me</span></h1>
-                                <div className="relative">
-                                    <iframe title="data" className="w-[94px] -z-10 absolute left-[-52px] top-[-50px] h-[94px]" src="https://lottie.host/embed/49ef9e95-4631-42fe-a4d5-ed8bf3addcfc/YLuZni78Ue.lottie"></iframe>
-                                    <h4 className="font-medium text-[20px]">Transforming ideas into digital experiences</h4>
+                        {/* Flex container - responsive column/row */}
+                        <div className="flex lg:flex-row flex-col lg:gap-0 gap-[40px] justify-between items-center">
+
+                            {/* Left Section */}
+                            <div data-aos="fade-right" className="flex flex-col md:gap-[30px] gap-[20px] w-full lg:w-1/2">
+                                <div className="flex justify-center flex-col gap-5 text-left">
+                                    <h1 className="font-inter font-bold text-[28px] sm:text-[34px] md:text-[48px] leading-tight">
+                                        Abo<span className="text-customTeal">ut Me</span>
+                                    </h1>
+                                    <div className="relative">
+                                        <iframe
+                                            title="data"
+                                            className="w-[64px] sm:w-[94px] h-[64px] sm:h-[94px] -z-10 absolute left-[-30px] sm:left-[-52px] top-[-30px] sm:top-[-50px]"
+                                            src="https://lottie.host/embed/49ef9e95-4631-42fe-a4d5-ed8bf3addcfc/YLuZni78Ue.lottie">
+                                        </iframe>
+                                        <h4 className="font-medium text-[16px] sm:text-[18px] md:text-[20px]">
+                                            Transforming ideas into digital experiences
+                                        </h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div  className="w-[500px]">
-                                <div className="">
-                                    <h1 className="font-bold text-[35px]">Hello, I<span className="text-customTeal">'m  Ashish</span>, a passionate <span className="text-customTeal">Full-Stack Web Developer.</span></h1>
-                                    <div className="font-semibold text-[20px] tracking-wide">
-                                        <h1>driven by the love for creating responsive and impactful web applications that not only look beautiful but also provide seamless performance and meaningful solutions.</h1>
+
+                                {/* About description */}
+                                <div className="max-w-[500px] w-full">
+                                    <div>
+                                        <h1 className="font-bold text-[16px] sm:text-[20px] md:text-[28px] lg:text-[35px] leading-snug">
+                                            Hello, I<span className="text-customTeal">'m Ashish</span>, a passionate
+                                            <span className="text-customTeal"> Full-Stack Web Developer.</span>
+                                        </h1>
+                                        <p className="font-semibold text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] tracking-wide mt-2">
+                                            driven by the love for creating responsive and impactful web applications
+                                            that not only look beautiful but also provide seamless performance and
+                                            meaningful solutions.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
 
-                            </div>
-                            <div data-aos="fade-left" className="relative   group md:mr-[50px]">
-                                <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
+                            {/* Right Section - Profile image */}
+                            <div data-aos="fade-left" className="relative group md:mr-[50px] w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] lg:w-[320px] lg:h-[320px]">
+                                <div className="w-full h-full rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
                                     <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 transition-all duration-700 group-hover:border-white/40 group-hover:scale-105" />
 
                                     {/* Optimized overlay effects - disabled on mobile */}
@@ -82,22 +107,52 @@ function AboutMe() {
                                     </div>
                                 </div>
                             </div>
-
-                        </div>
-                        <div className="flex justify-between">
-                            {
-                                data.map((item, index) => (
-                                    <div key={index + item} {...item}>
-                                        <AboutCard pending={true} ArrowUpRight={item.ArrowUpRight} description={item.description} label={item.label} value={item.value} Icon={item.Icon} />
-                                    </div>
-                                ))
-                            }
                         </div>
 
+                        {/* Stats Section (commented out for now) */}
+                        <div className="flex justify-between w-full z-0">
+                            <Swiper
+                                modules={[Autoplay]} 
+                                autoplay={{
+                                    delay: 2500,
+                                    disableOnInteraction: false, 
+                                }}
+                                breakpoints={{
+                                    320: { 
+                                        slidesPerView: 1,
+                                        spaceBetween: 10,
+                                    },
+                                    778: { 
+                                        slidesPerView: 1.5,
+                                        spaceBetween: 10,
+                                    },
+                                    1026: { 
+                                        slidesPerView: 2,
+                                        spaceBetween: 20,
+                                    },
+                                    1536: { 
+                                        slidesPerView: 3,
+                                        spaceBetween: 30,
+                                    },
+                                }}
+                                loop={true}
+                                className="mySwiper"
+                            >
+                                {
+                                    data.map((item, index) => (
+                                        <SwiperSlide>
+                                            <div key={index + item} {...item}>
+                                                <AboutCard pending={true} ArrowUpRight={item.ArrowUpRight} description={item.description} label={item.label} value={item.value} Icon={item.Icon} />
+                                            </div>
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
             </section>
         </>
     )
 }
-export default AboutMe
+export default AboutMe;
