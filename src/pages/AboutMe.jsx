@@ -84,7 +84,7 @@ function AboutMe() {
                             </div>
 
                             {/* Right Section - Profile image */}
-                            <div data-aos="fade-left" className="relative group md:mr-[50px] w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] lg:w-[320px] lg:h-[320px]">
+                            <div data-aos="fade-up" className="relative group md:mr-[50px] w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] lg:w-[320px] lg:h-[320px]">
                                 <div className="w-full h-full rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
                                     <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 transition-all duration-700 group-hover:border-white/40 group-hover:scale-105" />
 

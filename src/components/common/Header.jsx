@@ -7,11 +7,7 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 39);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,13 +15,15 @@ function Header() {
   }, []);
 
   return (
-    <>
+    <header className="fixed top-0 left-0 w-full z-50">
+      {/* ✅ Full section blur background */}
       <div
-        className={` font-inter py-[16px] px-4 flex items-center justify-between 
-          fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1520px] z-50 
-          transition-all duration-300 
+        className={`absolute inset-0 h-full transition-all duration-300  rounded-b-3xl
           ${scrolled ? "bg-white/30 dark:bg-black/30 backdrop-blur-md shadow-sm" : "bg-transparent"}`}
-      >
+      ></div>
+
+      {/* ✅ Limited width container */}
+      <div className="relative mx-auto w-full max-w-[1520px] font-inter py-[16px] px-4 flex items-center justify-between">
         {/* Logo */}
         <Fontui
           words={["dev", "des"]}
@@ -37,7 +35,7 @@ function Header() {
         {/* Theme Toggle */}
         <Theme />
       </div>
-    </>
+    </header>
   );
 }
 
