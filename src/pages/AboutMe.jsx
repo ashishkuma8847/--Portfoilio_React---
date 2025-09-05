@@ -44,7 +44,7 @@ function AboutMe() {
             <section className={`${theme ? "text-black" : "text-white"}`}>
                 <div className="container">
                     {/* Main container with responsive padding */}
-                    <div className="sm:pl-[40px] pt-[70px] sm:pt-[100px] pb-[90px]  lg:h-screen justify-center flex flex-col gap-[20px] md:gap-[40px]">
+                    <div className="sm:pl-[40px] pt-[70px] sm:pt-[100px] pb-[90px] lg:p-0  lg:h-screen justify-center flex flex-col gap-[20px] md:gap-[40px]">
 
                         {/* Flex container - responsive column/row */}
                         <div className="flex lg:flex-row flex-col lg:gap-0 gap-[40px] justify-between items-center">

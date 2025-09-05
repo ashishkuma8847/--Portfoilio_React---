@@ -68,7 +68,7 @@ const Language = [
       <section className={`${theme ? "text-black" : "text-white"} font-poppins`}>
         <div className="container flex 2xl:flex-row flex-col justify-between  ">
           {/* LEFT SIDE STICKY SECTION */}
-          <div className="flex flex-col mx-auto 2xl:mx-0 gap-[30px] max-w-[400px] w-full 2xl:pt-0 pt-[100px] 2xl:sticky top-28 self-start">
+          <div className="flex flex-col mx-auto 2xl:mx-0 gap-[30px] max-w-[400px] w-full 2xl:pt-0 sm:pt-[100px] pt-[80px] 2xl:sticky top-28 self-start">
             <div>
               <h1 className="font-semibold text-[25px] md:text-[34px] md:leading-[65px]">
                 Portfolio

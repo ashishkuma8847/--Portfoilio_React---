@@ -21,15 +21,15 @@ function Contect() {
             <section className={`${theme ? "text-black" : "text-white"} `}>
 
                 <div
-                    className={`w-full min-h-screen font-inter ${theme ? "text-black bg-portfolio-light" : "text-gray-300 bg-portfolio-dark"}`}
+                    className={`w-full min-h-screen  pt-[70px] sm:pt-[100px] pb-[90px] lg:p-0  font-inter ${theme ? "text-black bg-portfolio-light" : "text-gray-300 bg-portfolio-dark"}`}
                 >
-                    <div className="container justify-center px-4  flex items-center   h-screen gap-10 py-20">
+                    <div className="container justify-center px-4  flex lg:flex-row flex-col  items-center   h-screen md:gap-10 gap-5 py-20">
                         {/* Left Side */}
-                        <div data-aos="fade-right"  data-aos-delay="200" className="flex-1 flex flex-col gap-6 max-w-[400px] w-full ">
-                            <h1 data-aos="fade-right" className="text-4xl font-semibold text-customTeal flex gap-[10px]">
-                                Let’s Connect <iframe title="id" src="https://lottie.host/embed/a8c326ab-79af-4c6a-ae2e-44fce48336e3/CguXzoecsQ.lottie " className="w-[34px] h-[34px]"></iframe>
+                        <div data-aos="fade-right"  data-aos-delay="200" className="flex-1 flex flex-col gap-2 md:gap-6 max-w-[400px] w-full ">
+                            <h1 data-aos="fade-right" className="md:text-4xl text-2xl font-semibold text-customTeal flex gap-[5px] md:gap-[10px]">
+                                Let’s Connect <iframe title="id" src="https://lottie.host/embed/a8c326ab-79af-4c6a-ae2e-44fce48336e3/CguXzoecsQ.lottie " className="md:w-[34px] md:h-[34px] w-[24px] h-[24px]"></iframe>
                             </h1>
-                            <h2 data-aos="fade-right"  data-aos-delay="400" className="text-2xl font-bold">
+                            <h2 data-aos="fade-right"  data-aos-delay="400" className="md:text-2xl text-xl  font-bold">
                                 Let’s <span className="text-customTeal">Work Together!</span>
                             </h2>
                             <p data-aos="fade-right"  data-aos-delay="600" className="text-lg leading-relaxed">
@@ -64,7 +64,7 @@ function Contect() {
                         <div className="flex-1 max-w-[500px] w-full">
                             <form
                                 onSubmit={handleSubmit}
-                                className="flex flex-col gap-4 mt-6 bg-transparent "
+                                className="flex flex-col gap-4  bg-transparent "
                             >
                                 <input data-aos="fade-down"  data-aos-delay="800"
                                     type="text"
