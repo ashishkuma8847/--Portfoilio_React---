@@ -51,7 +51,7 @@ const ProjectsCard = () => {
             {(Click ? projects : projects.slice(0, 4)).map((item, index) => (
                 <div className="max-w-[396px] w-full"
                 key={index}
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                    data-aos={index % 3 === 0 ? "fade-up" : index % 3 === 1 ? "fade-up" : "fade-down"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                 >
                     <div className="flex flex-col gap-[20px] group transition-all duration-200 rounded-2xl  bg-gradient-to-t to-slate-400/50 from-[#999999]/10 shadow-lg px-4 py-4">
@@ -80,7 +80,8 @@ const ProjectsCard = () => {
                     </div>
                 </div>
             ))}
-            <button onClick={() => setClick(!Click)} className="bg-gradient-to-t flex justify-between items-center font-poppins  text-sm font-medium p-[10px] w-[100px] bg-white/10 backdrop-blur-lg rounded-lg shadow-lg mb-[25px]">See More <ChevronDown className={`${Click ? "rotate-180" : "rotate-0"} w-[15px] transition-all duration-200 text-customTeal h-[15px]`} />  </button>
+            <button onClick={() => setClick(!Click)} className="bg-gradient-to-t flex justify-between items-center font-poppins  text-sm font-medium p-[10px] w-[100px] bg-white/10 backdrop-blur-lg rounded-lg shadow-lg mb-[25px]">See More <ChevronDown className={`${Click ? "rotate-180" : "rotate-0"} w-[15px] transition-all duration-200 text-customTeal h-[15px]`} /> 
+             </button>
         </>
     )
 }

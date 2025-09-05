@@ -110,29 +110,29 @@ function AboutMe() {
                         </div>
 
                         {/* Stats Section (commented out for now) */}
-                        <div className="flex justify-between w-full z-0">
+                        <div className=" w-full z-0">
                             <Swiper
                                 modules={[Autoplay]} 
+                                spaceBetween={30}
                                 autoplay={{
                                     delay: 2500,
                                     disableOnInteraction: false, 
                                 }}
                                 breakpoints={{
-                                    320: { 
+                                    300: { 
                                         slidesPerView: 1,
-                                        spaceBetween: 10,
                                     },
-                                    778: { 
+                                    434: { 
+                                        slidesPerView: 1.3,
+                                    },
+                                    756: { 
                                         slidesPerView: 1.5,
-                                        spaceBetween: 10,
                                     },
                                     1026: { 
-                                        slidesPerView: 2,
-                                        spaceBetween: 20,
+                                        slidesPerView: 2.3,
                                     },
                                     1536: { 
                                         slidesPerView: 3,
-                                        spaceBetween: 30,
                                     },
                                 }}
                                 loop={true}

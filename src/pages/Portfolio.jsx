@@ -66,15 +66,15 @@ const Language = [
   return (
     <>
       <section className={`${theme ? "text-black" : "text-white"} font-poppins`}>
-        <div className="container flex justify-between  ">
+        <div className="container flex 2xl:flex-row flex-col justify-between  ">
           {/* LEFT SIDE STICKY SECTION */}
-          <div className="flex flex-col gap-[30px] w-[400px] sticky top-28 self-start">
+          <div className="flex flex-col mx-auto 2xl:mx-0 gap-[30px] max-w-[400px] w-full 2xl:pt-0 pt-[100px] 2xl:sticky top-28 self-start">
             <div>
-              <h1 className="font-semibold text-[34px] leading-[65px]">
+              <h1 className="font-semibold text-[25px] md:text-[34px] md:leading-[65px]">
                 Portfolio
                 <span className="text-customTeal"> Showcase</span>
               </h1>
-              <p className="font-medium text-[14px]">
+              <p className="font-medium text-[12px] md:text-[14px]">
                 Explore my journey through projects, and
                 technical expertise. Each section represents a milestone in my
                 continuous learning path.
@@ -87,7 +87,7 @@ const Language = [
           <div className="">
 
             {data === 0 ? (
-              <div className="grid grid-cols-2 gap-[30px]  mb-16 mt-32 flex-1 z-0">
+              <div className="flex flex-col justify-center items-center md:grid grid-cols-2  gap-[30px] mx-auto 2xl:mx-0 max-w-[822px] w-full  mb-16 mt-[20px] md:mt-32  flex-1 z-0">
                 <>
                
                   <ProjectsCard />
@@ -97,13 +97,13 @@ const Language = [
               :
               (
                 <>
-                <div className="container mb-16 mt-32  flex justify-center items-center  pb-[5%] ">
+                <div className="container mb-16 mt-[20px] md:mt-32  flex justify-center items-center  pb-[5%] ">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8 gap-5">
                 {Language.map((item, index) => (
                   <div
                     key={index}
                     className="h-[164px]"
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-down"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                   >
                     <Skills TechStackIcon={item.img} Language={item.Language}/>
