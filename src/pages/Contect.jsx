@@ -4,7 +4,8 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 function Contect() {
     const { theme } = useTheme();
     const [loading, setLoading] = useState(false);
@@ -29,12 +30,28 @@ function Contect() {
 
             .then((result) => {
                 console.log("Email sent successfully:", result.text);
-                alert("Message sent successfully!");
+               toast.success("Message sent successfully!", {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
                 setLoading(false);
                 formRef.current.reset();
             }, (error) => {
                 console.error("Email sending error:", error.text);
-                alert("Failed to send message.");
+                 toast.error("Failed to send message.", {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
                 setLoading(false);
             });
     };
@@ -42,6 +59,7 @@ function Contect() {
     return (
         <section className={`${theme ? "text-black" : "text-white"}`}>
             <div className={`w-full min-h-screen pt-[70px] sm:pt-[100px] pb-[90px] lg:p-0 font-inter ${theme ? "text-black bg-portfolio-light" : "text-gray-300 bg-portfolio-dark"}`}>
+            <ToastContainer/>
                 <div className="container justify-center px-4 flex lg:flex-row flex-col items-center h-screen md:gap-10 gap-5 py-20">
 
                     {/* Left Side */}
@@ -81,34 +99,41 @@ function Contect() {
                     {/* Right Side (Form) */}
                     <div className="flex-1 max-w-[500px] w-full">
                         <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-4 bg-transparent">
-                            <input data-aos="fade-down" data-aos-delay="800"
+                            <div data-aos="fade-down" data-aos-delay="800" className="flex flex-col w-full">
+                            <input 
                                 type="text"
                                 name="from_name"
                                 placeholder="Your Name"
                                 required
-                                className="bg-transparent border z-0 border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-customTeal"
+                                className={`${theme ? " placeholder-black" :" placeholder-white"} bg-transparent pl border z-0 border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-customTeal`}
                             />
-                            <input data-aos="fade-down" data-aos-delay="600"
+                            </div>
+                                <div data-aos="fade-down" data-aos-delay="600" className="flex flex-col w-full">
+                            <input 
                                 type="email"
                                 name="reply_to"
                                 placeholder="Your Email"
                                 required
-                                className="bg-transparent border z-0 border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-customTeal"
+                               className={`${theme ? " placeholder-black" :" placeholder-white"} bg-transparent pl border z-0 border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-customTeal`}
                             />
-                            <textarea data-aos="fade-down" data-aos-delay="400"
+                            </div>
+                            <div data-aos="fade-down" data-aos-delay="400" className="flex flex-col w-full">
+                            <textarea 
                                 name="message"
                                 placeholder="Your Message"
                                 rows="5"
                                 required
-                                className="bg-transparent border z-0 border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-customTeal"
+                                className={`${theme ? " placeholder-black" :" placeholder-white"} bg-transparent pl border z-0 border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-customTeal`}
                             ></textarea>
-                            <button data-aos="fade-down" data-aos-delay="200"
+                            </div>
+                            <div data-aos="fade-down" data-aos-delay="200" className="flex flex-col w-full">
+                            <button 
                                 type="submit"
                                 disabled={loading}
-                                className="bg-customTeal z-0 text-white font-semibold py-3 px-6 rounded-xl hover:scale-105 transition-transform duration-200 shadow-lg disabled:opacity-50 mb-16 md:mb-0"
+                                className="bg-customTeal z-0 text-white   font-semibold py-3 px-6 rounded-xl transform hover:scale-105 transition-transform duration-300 shadow-lg disabled:opacity-50 mb-16 md:mb-0"
                             >
                                 {loading ? "Sending..." : "Send"} <Send className="inline w-5 h-5" />
-                            </button>
+                            </button></div>
                         </form>
                     </div>
 
