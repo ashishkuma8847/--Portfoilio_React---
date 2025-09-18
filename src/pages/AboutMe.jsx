@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import CvButton from "../components/Card/CvButton";
 function AboutMe() {
     AOS.init({
         duration: 1200,
@@ -42,6 +43,7 @@ function AboutMe() {
     return (
         <>
             <section className={`${theme ? "text-black" : "text-white"}`}>
+          
                 <div className="container">
                     {/* Main container with responsive padding */}
                     <div className="sm:pl-[40px] pt-[70px] sm:pt-[100px] pb-[90px] lg:p-0  lg:h-screen justify-center flex flex-col gap-[20px] md:gap-[40px]">
@@ -81,6 +83,7 @@ function AboutMe() {
                                         </p>
                                     </div>
                                 </div>
+                                                <CvButton/>
                             </div>
 
                             {/* Right Section - Profile image */}
