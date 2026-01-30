@@ -2,15 +2,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 // CVDownloadButton.jsx
-export default function CvButton({
-  fileUrl = "/ddf.pdf", // default sample URL (replace it)
-  fileName = "CV",
-  className = "",
-}) {
+export default function CvButton({fileUrl = "/cv.pdf", fileName = "CV",className = "",}) 
+{
   const [downloading, setDownloading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
-
   // Download with progress using Fetch + ReadableStream
   const handleDownload = async () => {
     setError(null);

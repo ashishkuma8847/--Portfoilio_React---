@@ -28,14 +28,14 @@ function AboutMe() {
             ArrowUpRight: IconArrowUpRight,
             description: "Professional skills validated",
             label: "Certificates",
-            value: "7",
+            value: "3",
             Icon: IconAward
         },
         {
             ArrowUpRight: IconArrowUpRight,
             description: "Continuous learning journey",
-            label: "Years of Experience",
-            value: "3",
+            label: "Months of Experience",
+            value: "8",
             Icon: IconTimezone
         },
     ]

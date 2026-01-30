@@ -3,6 +3,7 @@
 @tailwind utilities;
 body{
     background-color: black;
+    cursor: none;
 }
 .colors{
     background:  linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2))

@@ -54,7 +54,7 @@ const ProjectsCard = () => {
                     data-aos={index % 3 === 0 ? "fade-up" : index % 3 === 1 ? "fade-up" : "fade-down"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                 >
-                    <div className="flex flex-col gap-[20px] group transition-all duration-200 rounded-2xl  bg-gradient-to-t to-slate-400/50 from-[#999999]/10 shadow-lg px-4 py-4">
+                    <a href={item.href} target="_blank" className="flex flex-col gap-[20px] group transition-all duration-200 rounded-2xl  bg-gradient-to-t to-slate-400/50 from-[#999999]/10 shadow-lg px-4 py-4">
                         {/* Project Image */}
                         <img
                             className="rounded-2xl transition-transform  z-0 duration-300 group-hover:scale-105"
@@ -65,19 +65,16 @@ const ProjectsCard = () => {
                         {/* Project Title + Link */}
                         <div className="flex flex-col gap-[5px]">
                             <h1 className="font-semibold text-base">{item.title}</h1>
-                            <a
+                            <h4
                                 className="flex gap-[5px] h-5 text-customTeal transition-all duration-200 text-sm font-medium items-center"
-                                href={item.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
                             >
                                 Live Demo{" "}
                                 <span className="w-[20px] h-[20px] flex justify-center items-center">
                                     <ExternalLink className="w-[15px] h-[15px] transition-all duration-200 group-hover:rotate-[30deg]" />
                                 </span>
-                            </a>
+                            </h4>
                         </div>
-                    </div>
+                    </a>
                 </div>
             ))}
             <button onClick={() => setClick(!Click)} className="bg-gradient-to-t flex justify-between items-center font-poppins  text-sm font-medium p-[10px] w-[100px] bg-white/10 backdrop-blur-lg rounded-lg shadow-lg mb-[25px]">See More <ChevronDown className={`${Click ? "rotate-180" : "rotate-0"} w-[15px] transition-all duration-200 text-customTeal h-[15px]`} /> 

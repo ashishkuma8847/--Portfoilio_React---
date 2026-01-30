@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Theme from "../Themetoggel/Themebutton";
 import Fontui from "../ui/Fontui";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,12 +26,14 @@ function Header() {
       {/* ✅ Limited width container */}
       <div className="relative container   font-inter py-[16px]  flex items-center justify-between">
         {/* Logo */}
+        <Link to={"/"}>
         <Fontui
           words={["dev", "des"]}
           className="text-lg md:text-3xl"
           inspan="h."
           outofspan="Ashis"
-        />
+          />
+          </Link>
 
         {/* Theme Toggle */}
         <Theme />

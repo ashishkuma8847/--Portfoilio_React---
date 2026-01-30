@@ -33,9 +33,9 @@ const Home = () => {
                         <Button title={"Tailwind"} />
                     </div>
                     <div className="flex gap-[15px]">
-                        <button className={`${theme ? "bg-white/50 border-black/10 group-hover:border-black/20" : "bg-black/50 border-white/10 group-hover:border-white/20"} relative rounded-xl  backdrop-blur-xl p-2 flex items-center justify-center border  transition-all  duration-300`}><IconBrandGithub /> </button>
-                        <button className={`${theme ? "bg-white/50 border-black/10 group-hover:border-black/20" : "bg-black/50 border-white/10 group-hover:border-white/20"} relative rounded-xl  backdrop-blur-xl p-2 flex items-center justify-center border  transition-all  duration-300`}><IconBrandInstagram /> </button>
-                        <button className={`${theme ? "bg-white/50 border-black/10 group-hover:border-black/20" : "bg-black/50 border-white/10 group-hover:border-white/20"} relative rounded-xl  backdrop-blur-xl p-2 flex items-center justify-center border  transition-all  duration-300`}><IconBrandLinkedin /> </button>
+                        <a href="https://github.com/ashishkuma8847?tab=repositories" target="_blank" className={`${theme ? "bg-white/50 border-black/10 group-hover:border-black/20" : "bg-black/50 border-white/10 group-hover:border-white/20"} relative rounded-xl  backdrop-blur-xl p-2 flex items-center justify-center border  transition-all  duration-300`}><IconBrandGithub /> </a>
+                        <a href="https://www.instagram.com/_ashish_taak_/" target="_blank" className={`${theme ? "bg-white/50 border-black/10 group-hover:border-black/20" : "bg-black/50 border-white/10 group-hover:border-white/20"} relative rounded-xl  backdrop-blur-xl p-2 flex items-center justify-center border  transition-all  duration-300`}><IconBrandInstagram /> </a>
+                        <a href="https://www.linkedin.com/in/ashish-kumar-2692523a7/" target="_blank" className={`${theme ? "bg-white/50 border-black/10 group-hover:border-black/20" : "bg-black/50 border-white/10 group-hover:border-white/20"} relative rounded-xl  backdrop-blur-xl p-2 flex items-center justify-center border  transition-all  duration-300`}><IconBrandLinkedin /> </a>
                     </div>
 
                 </div>
