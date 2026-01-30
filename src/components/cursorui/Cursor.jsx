@@ -8,22 +8,19 @@ export const MouseTrail = () => {
     const coords = { x: 0, y: 0 };
     const circles = document.querySelectorAll('.circle');
     let moveTimeout;
-    let isMoving = false;
-
+    
     circles.forEach(circle => {
       circle.x = 0;
       circle.y = 0;
     });
 
     const startMove = () => {
-      isMoving = true;
       circles.forEach(circle => {
         circle.classList.remove('circle-merge');
       });
     };
 
     const stopMove = () => {
-      isMoving = false;
       circles.forEach(circle => {
         circle.classList.add('circle-merge'); // merge into cursor
       });
