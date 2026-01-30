@@ -54,7 +54,7 @@ const ProjectsCard = () => {
                     data-aos={index % 3 === 0 ? "fade-up" : index % 3 === 1 ? "fade-up" : "fade-down"}
                     data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
                 >
-                    <a href={item.href} target="_blank" className="flex flex-col gap-[20px] group transition-all duration-200 rounded-2xl  bg-gradient-to-t to-slate-400/50 from-[#999999]/10 shadow-lg px-4 py-4">
+                    <a  rel="noopener noreferrer" href={item.href} target="_blank" className="flex flex-col gap-[20px] group transition-all duration-200 rounded-2xl  bg-gradient-to-t to-slate-400/50 from-[#999999]/10 shadow-lg px-4 py-4">
                         {/* Project Image */}
                         <img
                             className="rounded-2xl transition-transform  z-0 duration-300 group-hover:scale-105"

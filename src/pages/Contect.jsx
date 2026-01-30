@@ -77,19 +77,19 @@ function Contect() {
                         <div className="flex flex-col gap-3">
                             <p data-aos="fade-right" data-aos-delay="800" className="flex items-center gap-2 z-0">
                                 <Mail className="text-customTeal" />
-                                <a href="mailto:ashishkuma8847@gmail.com" className="hover:underline hover:text-customTeal">
+                                <a  rel="noopener noreferrer" href="mailto:ashishkuma8847@gmail.com" className="hover:underline hover:text-customTeal">
                                     ashishkuma8847@gmail.com
                                 </a>
                             </p>
                             <p data-aos="fade-right" data-aos-delay="1000" className="flex items-center gap-2 z-0">
                                 <Phone className="text-customTeal" />
-                                <a href="tel:+916284978409" className="hover:underline hover:text-customTeal">
+                                <a  rel="noopener noreferrer" href="tel:+916284978409" className="hover:underline hover:text-customTeal">
                                     +91 6284978409
                                 </a>
                             </p>
                             <p data-aos="fade-right" data-aos-delay="1200" className="flex items-center gap-2 z-0">
                                 <MapPin className="text-customTeal" />
-                                <a href="https://www.google.com/maps/place/Abohar,+Punjab,+India" target="_blank" className="hover:underline hover:text-customTeal">
+                                <a  rel="noopener noreferrer" href="https://www.google.com/maps/place/Abohar,+Punjab,+India" target="_blank" className="hover:underline hover:text-customTeal">
                                     Abohar, Punjab, India
                                 </a>
                             </p>

@@ -5,7 +5,6 @@ import {
   useMotionValue,
 
 } from "motion/react";
-import { useTheme } from "../Themetoggel/ThemeProvider";
 import { Link, useLocation } from "react-router-dom";
 
 export const FloatingDock2 = ({ items, desktopClassName }) => {
@@ -19,7 +18,6 @@ export const FloatingDock2 = ({ items, desktopClassName }) => {
 
 const FloatingDockDesktop = ({ items, className }) => {
   let mouseX = useMotionValue(Infinity);
-    const { theme } = useTheme();
 
   return (
     <motion.div
